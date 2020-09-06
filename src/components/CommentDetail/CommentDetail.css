@@ -5,8 +5,7 @@
     margin: 100px;
     padding: 30px;
     border-radius: 10px;
-    background-image: linear-gradient(skyblue, lightgrey);
-    color: darkgreen;
+    background-image: linear-gradient(skyblue, grey);
 
 }
 .comment-info img {
