@@ -1,0 +1,27 @@
+.post {
+    border: none;
+    margin: 10px;
+    margin-bottom: 20px;
+    padding: 25px;
+    border-radius: 25px;
+    background-image: linear-gradient(lightgreen, purple);
+    color: maroon;
+    box-shadow: 30px 10px 30px lightgrey;
+}
+.post p {
+    font-size: 20px;
+    color: antiquewhite;
+}
+.detail-button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-image: radial-gradient(goldenrod, indianred);
+    font-size: 14px;
+    cursor: pointer;
+}
+.detail-button:hover {
+    font-size: 16px;
+    font-weight: bold;
+}

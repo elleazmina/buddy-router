@@ -1,26 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+import AllPosts from './components/AllPosts/AllPosts';
+import NoMatch from './components/NoMatch/NoMatch';
+import PostDetail from './components/PostDetail/PostDetail';
+// import CommentDetail from './components/CommentDetail/CommentDetail';
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/posts">
+           <AllPosts></AllPosts>
+        </Route>
+        <Route path="/detail/:postId">
+            <PostDetail></PostDetail>
+        </Route>
+        {/* <Route path="/comments/:Id">
+          <CommentDetail></CommentDetail>
+        </Route> */}
+        <Route exact path="/">
+          <AllPosts></AllPosts>
+        </Route>
+        <Route path="*">
+          <NoMatch></NoMatch>
+        </Route>
+      </Switch>
+    </Router>
+    
   );
-}
+};
 
 export default App;
